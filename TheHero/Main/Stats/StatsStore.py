@@ -17,3 +17,6 @@ class StatsStore:
 
     def __setitem__(self, key: str, value):
         self.stats[key].setCurrentValue(value)
+
+    def __contains__(self, key: str):
+        return key in self.stats
