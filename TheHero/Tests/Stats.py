@@ -34,6 +34,8 @@ class TestStats(TestCase):
     def test_statsStoreCreation(self):
         obj = StatsStore([MockStatField(1), MockStatField(2)])
         self.assertEqual(len(obj.stats.keys()), 2)
+        self.assertTrue('mock1' in obj)
+        self.assertTrue('mock2' in obj)
 
     def test_statsStoreAccess(self):
         obj = StatsStore([MockStatField(1), MockStatField(2)])
