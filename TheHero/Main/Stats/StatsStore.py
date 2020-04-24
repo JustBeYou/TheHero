@@ -2,9 +2,8 @@ from typing import List, Dict
 from .StatFieldInterface import StatFieldInterface
 
 class StatsStore:
-    stats: Dict[str, StatFieldInterface] = {}
-
     def __init__(self, config: List[StatFieldInterface]):
+        self.stats: Dict[str, StatFieldInterface] = {}
         for configElem in config:
             self.stats[configElem.name] = configElem
 

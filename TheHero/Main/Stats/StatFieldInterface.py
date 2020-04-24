@@ -1,7 +1,8 @@
 from abc import ABC, abstractmethod
 
 class StatFieldInterface(ABC):
-    name: str = 'abstract'
+    def __init__(self):
+        self.name: str = 'abstract'
 
     def getName(self) -> str:
         return self.name
