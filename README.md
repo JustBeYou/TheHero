@@ -58,3 +58,49 @@ TheHero\Tests\__init__.py                                 0      0   100%
 TheHero\__init__.py                                       0      0   100%
 -------------------------------------------------------------------------
 ```
+
+## App output
+```
+--- Simulating a battle in the land of Emagia ---
+Orderus appeared on the battle field...
+health: 71
+strength: 80
+defence: 45
+speed: 47
+luck: 10
+
+Argyris appeared on the battle field...
+health: 62
+strength: 89
+defence: 53
+speed: 49
+luck: 37
+
+--- Turn 0 ---
+It's time for Argyris to attack.
+What a strike! Orderus suffered -44 health points. Left: 27
+--- --- ---
+
+--- Turn 1 ---
+It's time for Orderus to attack.
+What a strike! Argyris suffered -27 health points. Left: 35
+--- --- ---
+
+--- Turn 2 ---
+It's time for Argyris to attack.
+MagicShield spell was invoked by Orderus!
+Terrible miss...
+--- --- ---
+
+--- Turn 3 ---
+It's time for Orderus to attack.
+What a strike! Argyris suffered -27 health points. Left: 8
+--- --- ---
+
+--- Turn 4 ---
+It's time for Argyris to attack.
+What a strike! Orderus suffered -44 health points. Left: -17
+--- --- ---
+
+Orderus has fallen... Curse you Argyris!
+```
