@@ -13,7 +13,7 @@ The code is designed to be as extensible as possible. There are 3 important comp
 1. Stats module
 **Observation: I know that `stats` is uncountable, but `stat` just looked like the right name**
 
-This module's principal class is `StasStore`. It is a wrapper for a dictionary of strings to objects that implement `StatFieldInterface`. This interface provides a simple way to manage different properties that a creature could have.
+This module's principal class is `StatsStore`. It is a wrapper for a dictionary of strings to objects that implement `StatFieldInterface`. This interface provides a simple way to manage different properties that a creature could have.
 
 For example, `StatNumericField` implements the functionalities for a numeric property like health, strenght, etc... It supports minimum and maximum valid values, genereating a value in the specified range and altering the value. In the same manner other `Stat` classes could be implemented with very little effort and without changing `StatsStore` logic.
 
