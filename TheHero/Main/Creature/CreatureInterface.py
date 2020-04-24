@@ -2,14 +2,15 @@ from abc import ABC, abstractmethod
 from ..Stats.StatsStore import StatsStore
 
 class CreatureInterface(ABC):
-    name: str = 'abstract'
-    stats: StatsStore = StatsStore([])
+    def __init__(self):
+        self.name: str = 'abstract'
+        self.stats: StatsStore = StatsStore([])
 
     def getName(self) -> str:
         return self.name
 
-    def getStats(self) -> StatsStore:
-        return self.stats
+    def __getitem__(self, key: str):
+        return self.stats[key]
 
     @abstractmethod
     def addToStat(self, key: str, value):
@@ -17,4 +18,8 @@ class CreatureInterface(ABC):
 
     @abstractmethod
     def removeFromStat(self, key: str, value):
+        raise NotImplementedError
+
+    @abstractmethod
+    def attack(self, enemy):
         raise NotImplementedError
