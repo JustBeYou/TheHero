@@ -1,12 +1,14 @@
 from .SkillProxyInterface import SkillProxyInterface
-from ..Hero import Hero
+from ...Printable import Printable
 
 @SkillProxyInterface.register
+@Printable
 class MagicShield(SkillProxyInterface):
-    def getChance(self):
+    @staticmethod
+    def getChance():
         return 0.2
 
     def __getitem__(self, key: str):
-        if key == 'defence' and isinstance(self.getInternalObject(), Hero):
+        if key == 'defence':
             return self.internalCreature['defence'] * 2
         return self.internalCreature[key]

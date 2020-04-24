@@ -5,7 +5,7 @@ class SkillProxyInterface(ABC):
     def __init__(self, creatureObject):
         self.internalCreature = creatureObject
 
-    @abstractmethod
+    @staticmethod
     def getChance(self):
         raise NotImplementedError
 

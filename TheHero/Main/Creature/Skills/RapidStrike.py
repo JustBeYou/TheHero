@@ -1,8 +1,11 @@
 from .SkillProxyInterface import SkillProxyInterface
+from ...Printable import Printable
 
 @SkillProxyInterface.register
+@Printable
 class RapidStrike(SkillProxyInterface):
-    def getChance(self):
+    @staticmethod
+    def getChance():
         return 0.1
 
     def __getitem__(self, key: str):
