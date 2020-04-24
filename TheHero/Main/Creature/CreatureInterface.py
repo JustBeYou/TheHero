@@ -9,6 +9,9 @@ class CreatureInterface(ABC):
     def getName(self) -> str:
         return self.name
 
+    def getSkills(self):
+        return []
+
     def __getitem__(self, key: str):
         return self.stats[key]
 

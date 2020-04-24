@@ -26,6 +26,9 @@ class HittableCreature(CreatureInterface):
         damage = self.stats['strength'] - enemy['defence']
         if damage > 0 and not missed:
             enemy.removeFromStat('health', damage)
+            return (True, damage)
+
+        return False
 
     def isDead(self) -> bool:
         return self.stats['health'] <= 0

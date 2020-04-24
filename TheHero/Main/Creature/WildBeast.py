@@ -1,7 +1,9 @@
 from .HittableCreature import HittableCreature
 from ..Stats.StatsStore import StatsStore
 from ..Stats.StatNumericField import StatNumericField
+from ..Printable import Printable
 
+@Printable
 class WildBeast(HittableCreature):
     def __init__(self, name: str):
         super().__init__(name, StatsStore([
